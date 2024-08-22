@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Manager</title>
+	<style>
+    @import url("style.css");
+	</style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Expense Manager</h1>
+        <label for="date">Select Date</label>
+        <input type="text" id="date" />
+        <h2>Add Expense</h2>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="Expense Description" />
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Amount" />
+        </div>
+        <div class="form-group">
+            <label for="shopkeeper">Category</label>
+            <div class="shopkeeper-controls">
+                <select id="shopkeeper"></select>
+                <span class="icon add" id="addShopkeeper"><i class="fas fa-plus"></i></span>
+                <span class="icon delete" id="deleteShopkeeper"><i class="fas fa-minus"></i></span>
+            </div>
+        </div>
+        <button id="addExpense">Add Expense</button>
+        <h2>Daily Expenses</h2>
+        <p id="selectedDate"></p>
+        <ul id="expenseList"></ul>
+        <p id="totalAmount"></p>
+        <button id="viewMonthlyExpenses">View Monthly Expenses</button>
+    </div>
+    <div id="shopkeeperModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Store</h2>
+            <input type="text" id="newShopkeeper" placeholder="Store Name" />
+            <button id="saveShopkeeper">Save</button>
+        </div>
+    </div>
+    <div id="deleteShopkeeperModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Delete Store</h2>
+            <button id="confirmDeleteShopkeeper">Confirm Delete</button>
+        </div>
+    </div>
+    <div id="monthlyExpenseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Monthly Expense Chart</h2>
+            <canvas id="expenseChart"></canvas>
+            <button id="viewDailyExpenses">View Daily Expenses</button>
+        </div>
+    </div>
+    <div id="dailyExpenseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Daily Expenses for Selected Month</h2>
+            <ul id="monthlyExpenseList"></ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>

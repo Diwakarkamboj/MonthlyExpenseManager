@@ -1,0 +1,24 @@
+---------------------------------------------------
+Here are the ownership and the certification details
+of the MEM 2.1
+---------------------------------------------------
+
+app_name - 						MEM
+app_alias - 					mem
+app_author_name - 				My Company
+app_author_organizational - 	My Company
+app_author_organization - 		My Company
+app_author_locality - 			My Company
+app_author_state - 				Victoria
+app_author_country - 			Australia
+app_password - 					IIaN0G13dops
+app_versionName - 				versionName "2.1"
+app_versionCode - 				201
+
+---------------------------------------------------
+The certification was created by WebIntoApp.com at
+the Thursday 22nd of August 2024 03:02:07 AM
+
+https://www.webintoapp.com
+---------------------------------------------------
+
